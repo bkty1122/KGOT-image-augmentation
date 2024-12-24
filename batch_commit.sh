@@ -23,9 +23,13 @@ function stage_files() {
 # Commit and push changes
 function commit_and_push() {
     local batch_number=$1
+    shift       # Remove the batch number from the arguments
+    local files=("$@")  # Remaining arguments are the files to commit
 
-    # Commit the changes
-    git commit -m "${COMMIT_PREFIX} #${batch_number}"
+    # Commit only the files in the current batch
+    for file in "${files[@]}"; do
+        git commit -m "${COMMIT_PREFIX} #${batch_number}" -- "$file"
+    done
 
     # Push the changes to the remote branch
     git push origin "$BRANCH_NAME"
@@ -49,13 +53,18 @@ function process_batches() {
         # Get the first $BATCH_SIZE files from the list
         files_to_stage=("${file_list[@]:0:$BATCH_SIZE}")
 
+        # Clear the staging area to avoid including previously staged files
+        git reset
+
         # Stage the files
         echo "Staging ${#files_to_stage[@]} files..."
-        stage_files "${files_to_stage[@]}"
+        for file in "${files_to_stage[@]}"; do
+            git add "$file"
+        done
 
         # Commit and push the changes
         echo "Committing and pushing batch #$batch_number..."
-        commit_and_push "$batch_number"
+        commit_and_push "$batch_number" "${files_to_stage[@]}"
 
         # Increment the batch number
         ((batch_number++))
