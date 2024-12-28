@@ -17,8 +17,8 @@ This repository contains:
   - `data/orig_no_bg`: The original snake images with the background removed.
   - `data/trad_aug`: Images augmented using traditional augmentation methods (e.g., flipping, rotation, color changes).
   - `data/kgot_aug`: Images augmented using the KGOT algorithm.
-
 - **`kgot_app/`**: The core implementation of the KGOT algorithm and an example app to try KGOT on your own data.
+
   - Includes the logic for KGOT, example input images, and JSON annotations.
   - Users can experiment with the KGOT algorithm by installing the requirements and running the app.
 
@@ -85,7 +85,7 @@ Run the KGOT application:
 python app/main.py
 ```
 
-An app named KGOT Image Processor will be prompted out. You can select the COCO JSON file and the folder of images to process, and the expected output folder for the augmented images. The example input image, JSON file and the expected output results are provided in the `kgot_app/example` folder.
+An app named KGOT Image Processor will be prompted out. You can select the COCO JSON file and the folder of images to process, and the expected output folder for the augmented images. The sampled input image, JSON file and the expected output results are provided in the `kgot_app/example` folder.
 
 ![KGOT App Usage Demo](misc/kgot_app_demo.gif)
 
