@@ -102,7 +102,6 @@ If you use KGOT in your research or applications, please cite this repository:
   journal={Preprint},
   year={2025},
   note={Under review at ISMB/ECCB 2025},
-  <!-- url={https://your-preprint-link-here} -->
 }
 ```
 
