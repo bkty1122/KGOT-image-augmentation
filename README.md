@@ -48,8 +48,7 @@ The repository is organized as follows:
 ├── kgot_app/              # Implementation of the KGOT algorithm
 │   ├── example/           # Example input image and JSON file for testing the app
 │   ├── requirements.txt   # Python dependencies for KGOT
-│   ├── application.py     # Main script to run the KGOT app
-│   ├── utils/             # Utility functions for interpolation, pixel mapping, etc.
+│   ├── app/               # Main KGOT app implementation
 │
 └── README.md              # Documentation
 ```
