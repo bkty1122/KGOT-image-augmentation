@@ -100,11 +100,11 @@ If you use KGOT in your research or applications, please cite this repository:
   author={Tszyi Kwok, Brendan Park, Katharine Yagi, Anne Yagi, Chunsheng Yang, Min Liao, Yifeng Li},
   journal={Preprint},
   year={2025},
-  note={Under review at ISMB/ECCB 2025},
+  note={Under review at CIBCB 2025},
 }
 ```
 
-This work is currently under review at ISMB/ECCB 2025. The citation will be updated if the paper is officially accepted.
+This work is currently under review at CIBCB 2025. The citation will be updated if the paper is officially accepted.
 
 ---
 
